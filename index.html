@@ -2,34 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>website</title>
-  <link rel="https://a.pinatafarm.com/680x679/90e5b599f0/long-nose-dog-3891b543162851d92be6fa5ab2166815-meme.jpeg" type="image/png">
+  <title>Welcome to my website!!!</title>
+  <link rel="icon" href="https://media.discordapp.net/attachments/1223771215978696848/1377029916796780564/twinklefavicon.png?ex=68377a8c&is=6836290c&hm=f912721d101c3ebdaa45fb20a69f9e02e40afb0cf46906b648a23f978f1f2258&=&format=webp&quality=lossless&width=938&height=938" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #9ddcf4;
+      --text-color: white;
+      --link-color: white;
+      --link-hover-color: #ffd700;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f5f5f5;
+      --link-color: #f5f5f5;
+      --link-hover-color: #ff69b4;
+    }
+
     body {
-      font-family: 'Comic Sans', sans-serif;
+      font-family: 'Lexend', sans-serif;
       text-align: center;
       margin-top: 5em;
-      background-color: #9ddcf4;
-      color: white;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
     }
+
     a {
       display: block;
       margin: 1em 0;
       font-size: 2.2em;
-      color: white;
+      color: var(--link-color);
       text-decoration: none;
+      transition: color 0.3s;
     }
+
+    a:hover {
+      color: var(--link-hover-color);
+    }
+
     img.logo {
-      width: 200px; /* You can change this size if needed */
+      width: 500px;
       border-radius: 1em;
       margin-bottom: 1em;
+    }
+
+    button.theme-toggle {
+      margin-bottom: 2em;
+      font-size: 1em;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 0.5em;
+      cursor: pointer;
+      background-color: var(--link-color);
+      color: var(--bg-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    button.theme-toggle:hover {
+      background-color: var(--link-hover-color);
     }
   </style>
 </head>
 <body>
-  <img src="https://a.pinatafarm.com/680x679/90e5b599f0/long-nose-dog-3891b543162851d92be6fa5ab2166815-meme.jpeg" alt="dog" class="logo">
-  <a href="https://www.youtube.com/@Mrbeast">Mrbeast</a>
-  <p> Bottom text </p>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+  <img src="https://media.discordapp.net/attachments/1223771215978696848/1377024415275024494/MUFFIIN_3.png?ex=6837756c&is=683623ec&hm=6dc17590a8cbb3491c0dde13838acb8e288b764fbfe8ced1ede59a26dd7a8934&=&format=webp&quality=lossless&width=1959&height=1103" alt="@muffiin85 logo" class="logo">
+  <a href="https://www.youtube.com/@Muffiin85">Youtube</a>
+  <a href="https://discordapp.com/users/1036288542462185632">Discord</a>
+  <p>Bottom text</p>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
 </body>
 </html>
